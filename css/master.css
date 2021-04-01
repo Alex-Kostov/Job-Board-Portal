@@ -538,5 +538,43 @@ a {
     margin-top: 0.5em;
   }
 }
+.create-form {
+  padding: 1.5em;
+  background-color: white;
+  padding: 16px;
+  text-align: center;
+  width: 450px;
+  margin: auto;
+  border: 1px solid #d5dcef;
+  border-radius: 0.25em;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 6%);
+}
+.create-form input, textarea {
+  margin: 10px;
+  width: 90%;
+}
+.create-form input:focus, textarea:focus {
+  background-color: rgb(213, 217, 230);
+  outline: none;
+}
+.create-form button {
+  color:white;
+  background-color: #3C71FE;
+  width: 90%;
+  margin-top: 10px;
+  padding: 15px 10px;
+  border-radius: 0.35em;
+}
+.create-form button:hover {
+  cursor: pointer;
+  background-color:  #2a51be;
+}
+.create-form span {
+  font-weight: bolder;
+  margin-left: 21px;
+  margin-bottom: -8px;
+  float: left;
+}
+
 
 /*# sourceMappingURL=master.css.map */
