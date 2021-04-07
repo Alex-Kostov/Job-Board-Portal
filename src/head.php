@@ -9,6 +9,10 @@
   <div class="site-wrapper">
     <header class="site-header">
       <h1 class="site-title"><a href="index.php">Job Offers</a></h1>
+      <form action="search.php" class="search-form" method="POST">
+        <input type="text" name="search" placeholder="keyword">
+        <button type="submit" name="submit-search">Search</button>
+      </form>
     </header>
 
     <head>

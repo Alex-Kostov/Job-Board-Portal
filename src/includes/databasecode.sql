@@ -9,6 +9,7 @@ VALUES ('admin', '123456');
 CREATE TABLE offers (
   offers_id int(11) AUTO_INCREMENT PRIMARY KEY not null,
   offers_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  offers_status varchar(256) DEFAULT 'waiting for approval',
   offers_title varchar(256) not null,
   offers_description varchar(256) not null,
   offers_company varchar(256) not null,
@@ -19,6 +20,7 @@ CREATE TABLE offers (
 );
 
 INSERT INTO offers (
+    offers_status,
     offers_title,
     offers_description,
     offers_company,
@@ -28,6 +30,7 @@ INSERT INTO offers (
     offers_location
   )
 VALUES (
+    "approved",
     "Pricing Specialist and Market Reasercher",
     "Browse mobile.bg and check the cars prices and then analyze them to forecast the future price.",
     "Ald Automotive",

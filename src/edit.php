@@ -26,6 +26,31 @@ include_once 'includes/dbh.inc.php';
       </li>
 
     <?php  } ?>
+
+    <h3>New job offers to be reviewed:</h3>
+    <?php 
+      $result = getDataForRewiew($conn);
+      $queryResults = mysqli_num_rows($result);
+
+      if($queryResults > 0){
+        while($row = mysqli_fetch_assoc($result)) {
+          echo "<li class='job-card'>
+          <div class='job-primary'>
+            <h2 class='job-title'><a href='details.php?id=".$row['offers_id']."'>".$row['offers_title']."</a></h2>
+            <div class='job-meta'>
+              <a class='meta-company' href='details.php?id=".$row['offers_id']."'>".$row['offers_company']."</a>
+            </div>
+          </div>
+          <div class='job-edit'>
+            <a href='includes/approve.inc.php?id=".$row['offers_id']."'>Approve</a>
+            <a href='includes/reject.inc.php?id=".$row['offers_id']."'>Reject</a>
+          </div>
+        </li>";
+        }
+      } else {
+        echo "No offers for reviewing";
+      }
+    ?>
 </ul>
 
 <?php
