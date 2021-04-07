@@ -13,7 +13,7 @@
  ```
  - after instaling the needed dependencies you are ready to go into the src/includes folder and open dbh.inc.php, `$serverName` should remain `localhost` in `$dbUsername` and `dbPassword` you will need to enter your MySQL credentials and finally in `$dbName` enter `job-portal`
  - after that open `src/includes/databasecode.sql` and copy everything, then open new SQL tab in [localhost/phpmyadmin][phpAdmin] paste and run it this will create your inital database and its mandatory step, without this step we can't run the project.
- - in this final step we are going to open the project , your Apache and MySQL should be running and the database should be initialized with the given in `databasecode.sql` commands , now you need to open your browser and go to [http://localhost/job-portal/Job-Board-Portal/src/index.php][localhost]
+ - in this final step we are going to open the project , your Apache and MySQL should be running and the database should be initialized with the given in `databasecode.sql` commands , now you need to open your browser and go to [http://localhost/Job-Board-Portal/src/index.php][localhost]
  ### Credentials for admin panel
 In order to edit and approve offers you need to be loged in as admin, the `username` is `admin` and the `password` is `123456`.
 
